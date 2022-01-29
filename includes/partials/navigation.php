@@ -3,10 +3,13 @@
     <nav>
         <ul>
             <li>
-                <a href="index.php">Home</a>
+                <a href="index.php">Contact Me</a>
             </li> 
             <li>
-                <a href="contact.php">Contact</a>
+                <a href="portfolio.php">Portfolio</a>
+            </li> 
+            <li>
+                <a href="aboutme.php">About Me</a>
             </li> 
         </ul> 
     </nav> 
