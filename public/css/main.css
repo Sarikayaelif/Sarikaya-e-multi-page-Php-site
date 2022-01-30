@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+body {
+    font-family: loos-normal, sans-serif;
+    color: rgba(5, 33, 128, 0.712);
+    margin: 0 auto;
+    min-width: none;
+    padding: 50px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(57, 10, 95);
+}
+ p {
+    font-size: 1.5em;
+}
+header {
+    
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+#navCon {
+    width: 100%;
+}
+#navCon ul {
+list-style-type: none;
+padding: 0;
+margin:0;
+width: 100%;
+height: 100%;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-around;
+}
+
+#navCon ul li {
+    float: left;
+    width: 33%; 
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2em;
+     }
+ #navCon ul li a:hover{ 
+        color: #dba868;
+     }
+        
+        #navCon ul li:after
+        {
+        content: ''; 
+        width: 1px;
+        height: 100%;
+        background-color: #000;
+        position: absolute;
+        top: 0;
+        right: 0;
+        }
+        
+        #navCon ul li:last-child:after{ 
+        display: none; 
+        } 
+        footer {
+            margin-top: 40px;
+        }
+        footer p {
+            font-size: 1em;
+        }
+        #vectorImg {
+            width: 50%;
+        } 
+        form input, textarea {
+            margin: 0 auto;
+            width: 50%;
+            border-style: none;
+            background-color: rgb(188, 238, 245);
+            margin-bottom: 10px;
+            align-items: center;
+            padding: 10px;
+        }
+        form button {
+            margin: 0 auto;
+            width: 20%;
+            padding: 10px;
+            border-style: none;
+            background-color: rgb(6, 214, 241);
+            margin-top: 10px;
+            align-items: center;
+            transition: .3s ease;
+        }
+        form button:hover {
+               
+                 transform: scale(1.1);
+                 -webkit-transform: scale(1.1);
+                -ms-transform: scale(1.1);
+            }
+
+#portfolioHolder img,p {
+    margin: 20px 0;
+}
+#portfolioHolder p {
+    font-size: 1em;
+}
+        
+        

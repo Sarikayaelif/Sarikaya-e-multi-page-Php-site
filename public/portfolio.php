@@ -1,15 +1,15 @@
 <?php
 $listingData = [
     [
-        'description' => 'First website I made in first semester.',
+        'description' => '<p>First website I made in first semester.</p>',
         'image' => '<img src="../public/images/portfolio6.jpg" alt="portfolio1"/>'
     ],
     [
-        'description' => 'A website from boot camp in third semester.',
+        'description' => '<p>A website from boot camp in third semester.</p>',
         'image' => '<img src="../public/images/portfolio7.jpg" alt="portfolio2"/>'
     ],
     [
-        'description' => 'A Style frame by using photoshop. ',
+        'description' => '<p>A Style frame by using photoshop. </p>',
         'image' => '<img src="../public/images/portfolio9.jpg" alt="portfolio3"/>'
     ]
    
@@ -30,7 +30,7 @@ $listingData = [
         <?php include '../includes/partials/navigation.php'; ?>
         <h3> Hello there! These are few piece of my projects.</h3>
          
-        <div>
+        <div id="portfolioHolder">
           <?php
                 foreach ($listingData as $data) {
                      echo $data['description'] . ' ' . $data['image'] . "<br>"; 

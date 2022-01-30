@@ -14,12 +14,12 @@
     </head>
     <body>
         <?php include '../includes/partials/navigation.php'; ?>
-        <h3>Hello There!</h3> 
+        <h3>Hello There!</h3>
+        <?php echo "<img  src='../public/images/elif.png' alt='elif'/>"; ?>
+        
         <h2>I'm Elif Sarikaya</h2>
 
-        <?php echo "<img src='../public/images/elif.png' alt='elif'/>"; ?>
-
-        <img src="<?php echo $image_url;?>" alt="Elif">
+        <img id="vectorImg" src="<?php echo $image_url;?>" alt="vector img"> 
 
         <p>I am a mom of two; I am proud of my children and also my never-ending energy. Also, I am a mathematician, and had worked as a high school math teacher for 10 years. After I moved to Canada, I decided to change my career and combine my logical and artistic abilities, and started the Interactive Media Design Program at Fanshawe College. I love travelling and going to new places.</p>
         

@@ -1,6 +1,6 @@
 <!--we created technically a fragment, we dont need html or php opening closing tag-->
 <header>
-    <nav>
+    <nav id="navCon">
         <ul>
             <li>
                 <a href="index.php">Contact Me</a>
