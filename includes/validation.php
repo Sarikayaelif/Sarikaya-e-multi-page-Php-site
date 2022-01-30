@@ -47,3 +47,16 @@ function isEmailValid($email)
 
     return true;
 }
+
+function isCommentValid($comment)
+{
+    if (isFieldEmpty($comment)) {
+        return false;
+    }
+
+    if (strlen($comment) < 2) { // they can just say hi
+        return false;
+    }
+
+    return true;
+}
