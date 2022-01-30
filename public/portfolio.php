@@ -1,21 +1,18 @@
 <?php
 $listingData = [
     [
-        'title' => 'Kitten number 1!',
-        'image' => 'http://placekitten.com/400/300'
+        'description' => 'First website I made in first semester.',
+        'image' => '<img src="../public/images/portfolio6.jpg" alt="portfolio1"/>'
     ],
     [
-        'title' => 'Hello Kitten Two!',
-        'image' => 'http://placekitten.com/401/301'
+        'description' => 'A website from boot camp in third semester.',
+        'image' => '<img src="../public/images/portfolio7.jpg" alt="portfolio2"/>'
     ],
     [
-        'title' => 'Kitten number Three!',
-        'image' => 'http://placekitten.com/402/302'
-    ],
-    [
-        'title' => 'Kitten Four!',
-        'image' => 'http://placekitten.com/403/303'
-    ],
+        'description' => 'A Style frame by using photoshop. ',
+        'image' => '<img src="../public/images/portfolio9.jpg" alt="portfolio3"/>'
+    ]
+   
 ];
 
 ?>
@@ -31,15 +28,17 @@ $listingData = [
     </head>
     <body>
         <?php include '../includes/partials/navigation.php'; ?>
-        <p>
-            Hello, world, this is the contact page.
-        </p> 
+        <h3> Hello there! These are few piece of my projects.</h3>
+         
+        <div>
+          <?php
+                foreach ($listingData as $data) {
+                     echo $data['description'] . ' ' . $data['image'] . "<br>"; 
+                }
+            ?>
+          </div> 
 
-        <?php
-            foreach ($myData as $data) {
-               echo $data['title'] . ' ' . $data['image']; 
-            }
-        ?>
+        
     <?php include '../includes/partials/footer.php'; ?>
     </body>
 </html>

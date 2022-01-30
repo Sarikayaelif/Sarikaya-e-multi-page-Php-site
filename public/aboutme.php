@@ -1,23 +1,6 @@
 <?php
-$listingData = [
-    [
-        'title' => 'Kitten number 1!',
-        'image' => 'http://placekitten.com/400/300'
-    ],
-    [
-        'title' => 'Hello Kitten Two!',
-        'image' => 'http://placekitten.com/401/301'
-    ],
-    [
-        'title' => 'Kitten number Three!',
-        'image' => 'http://placekitten.com/402/302'
-    ],
-    [
-        'title' => 'Kitten Four!',
-        'image' => 'http://placekitten.com/403/303'
-    ],
-];
-
+   $image_url='https://thumbs.dreamstime.com/z/media-developer-female-office-media-developer-female-office-176072085.jpg';
+   
 ?>
 <html>
     <head>
@@ -31,15 +14,15 @@ $listingData = [
     </head>
     <body>
         <?php include '../includes/partials/navigation.php'; ?>
-        <p>
-            Hello, world, this is the contact page.
-        </p> 
+        <h3>Hello There!</h3> 
+        <h2>I'm Elif Sarikaya</h2>
 
-        <?php
-            foreach ($myData as $data) {
-               echo $data['title'] . ' ' . $data['image']; 
-            }
-        ?>
+        <?php echo "<img src='../public/images/elif.png' alt='elif'/>"; ?>
+
+        <img src="<?php echo $image_url;?>" alt="Elif">
+
+        <p>I am a mom of two; I am proud of my children and also my never-ending energy. Also, I am a mathematician, and had worked as a high school math teacher for 10 years. After I moved to Canada, I decided to change my career and combine my logical and artistic abilities, and started the Interactive Media Design Program at Fanshawe College. I love travelling and going to new places.</p>
+        
         <?php include '../includes/partials/footer.php'; ?>
     </body>
 </html>

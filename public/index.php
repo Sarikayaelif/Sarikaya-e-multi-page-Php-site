@@ -7,12 +7,14 @@ include '../includes/functions.php'; //we need to import the file to avoid calli
 $firstNameSubmission = getSubmissionFromSession('first_name'); // defined variable represent the fuction which are defined in the functions.php file
 $lastNameSubmission = getSubmissionFromSession('last_name');
 $emailSubmission = getSubmissionFromSession('email');
+$commentSubmission = getSubmissionFromSession('comment');
 
 $showSubmissionData = shouldShowSubmissionData();
 
 $firstNameError = getErrorMessageFromSession('first_name'); // defined variable represent the fuction which are defined in the functions.php file
 $lastNameError = getErrorMessageFromSession('last_name');
 $emailError = getErrorMessageFromSession('email');
+$commentError = getErrorMessageFromSession('comment');
 
 $_SESSION['errors'] = [];
 $_SESSION['submission'] = [];
@@ -41,19 +43,25 @@ $_SESSION['submission'] = [];
                 <?php echo $firstNameError; ?>
             </span> 
             <br> 
+
             <input type="text" name="last_name" placeholder="last name" value="<?php echo $lastNameSubmission; ?>">
             <span style="color: red">
                 <?php echo $lastNameError; ?>
             </span> 
             <br> 
+
             <input type="text" name="email" type="email" placeholder="email" value="<?php echo $emailSubmission; ?>"> 
             <span style="color: red">
                 <?php echo $emailError; ?>
             </span> 
-            <br> 
-            <button type="submit">
-                SEND
-            </button> 
+            <br>
+
+            <textarea name="comment" id="comment" cols="30" rows="10" value="<?php echo $commentSubmission; ?>"></textarea>
+            <span style="color: red">
+                <?php echo $commentError; ?>
+            </span>
+
+            <button type="submit">SEND</button> 
         </form> 
         <?php include '../includes/partials/footer.php'; ?>
     </body>

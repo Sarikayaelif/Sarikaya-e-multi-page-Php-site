@@ -22,39 +22,45 @@ $_SESSION['submission'] = $_POST; // this arraay shows the valid inputs are ente
 $firstName = getPostDataWithDefault('first_name');
 $lastName = getPostDataWithDefault('last_name');
 $email = getPostDataWithDefault('email');
+$comment = getPostDataWithDefault('comment');
 
 $firstNameValid = isFirstNameValid($firstName); // these functions defined in the validatin.php file
 $lastNameValid = isLastNameValid($lastName);
 $emailValid = isEmailValid($email);
+$commentValid = isCommentValid($comment);
 
 if (! $firstNameValid) {
-    $_SESSION['errors']['first_name'] = 'First name is not valid';
+    $_SESSION['errors']['first_name'] = 'Please enter your first name.';
 }
 
 if (! $lastNameValid) {
-    $_SESSION['errors']['last_name'] = 'Last name is not valid';
+    $_SESSION['errors']['last_name'] = 'Please enter your last name.';
 }
 
 if (! $emailValid) {
-    $_SESSION['errors']['email'] = 'Email is not valid';
+    $_SESSION['errors']['email'] = 'Please enter a valid email address.';
+}
+if (! $commentValid) {
+    $_SESSION['errors']['comment'] = 'Please enter your message.';
 }
 
-if (! $firstNameValid || ! $lastNameValid || ! $emailValid) {
+if (count($errors) > 0) { // at least of Firstname, lastname, email, comment are not valid it will return current page
+   $_SESSION['errors'] = $errors;
     // set errors to show to user here
     header('Location: ' . $_SERVER['HTTP_REFERER']);
 
     die;
 }
 
-//$to = "n_ireland@fanshaweonline.ca";
 $to = "sarikayaelif1412@gmail.com";
-$subject = "New message from php form!";
+$subject = "New message from multi page php site!";
 //$message = "<html><body>";
 $message = "";
 $message .= "First name: " . $firstName . "\r\n";
 $message .= "Last name: " . $lastName . "\r\n";
-$message .= "Email: " . $email . "<br>";
-$message .= "</body></html>";
+$message .= "Email: " . $email . "\r\n";
+$message .= "Comment: " . $comment . "\r\n";
+//$message .= "</body></html>";
 
 mail($to, $subject, $message);
 //var_dump('here');
