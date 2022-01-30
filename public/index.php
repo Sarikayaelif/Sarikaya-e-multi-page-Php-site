@@ -39,28 +39,28 @@ $_SESSION['submission'] = [];
             <!--with this value the input is given stay beyond the input box, 
             it is not valid but at he same time it not empty it still stay beyond in the box unless reload the 
             page( it is solved by putting submission array after the line we send the email, so it clear the page after the submission)-->
-            <span style="color: red">
+            <span style="color: purple">
                 <?php echo $firstNameError; ?>
             </span> 
             <br> 
 
             <input type="text" name="last_name" placeholder="last name" value="<?php echo $lastNameSubmission; ?>">
-            <span style="color: red">
+            <span style="color: purple">
                 <?php echo $lastNameError; ?>
             </span> 
             <br> 
 
             <input type="text" name="email" type="email" placeholder="email" value="<?php echo $emailSubmission; ?>"> 
-            <span style="color: red">
+            <span style="color: purple">
                 <?php echo $emailError; ?>
             </span> 
             <br>
 
-            <textarea name="comment" id="comment" cols="30" rows="10" value="<?php echo $commentSubmission; ?>"></textarea>
-            <span style="color: red">
+            <textarea name="comment" id="comment" placeholder="Message"cols="30" rows="10" value="<?php echo $commentSubmission; ?>"></textarea>
+            <span style="color: purple">
                 <?php echo $commentError; ?>
             </span>
-
+            <br>
             <button type="submit">SEND</button> 
         </form> 
         <?php include '../includes/partials/footer.php'; ?>
